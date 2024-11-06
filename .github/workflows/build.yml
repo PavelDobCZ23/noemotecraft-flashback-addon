@@ -22,11 +22,11 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v3
         with:
-          arguments: collectArtifacts
+          arguments: build
 
-      - name: capture build artifacts
+      - name: Capture artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: artifacts
+          name: libs
           path: |
-            artifacts
+            build/libs
