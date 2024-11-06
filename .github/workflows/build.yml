@@ -24,9 +24,9 @@ jobs:
         with:
           arguments: build
 
-      - name: capture 
+      - name: Capture artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: artifacts
+          name: libs
           path: |
-            artifacts
+            libs
