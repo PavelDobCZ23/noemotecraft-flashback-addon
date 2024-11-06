@@ -19,6 +19,7 @@ fun saveC2SEmotePacket(emoteData: KeyframeAnimation?, player: UUID) {
                 .configureToStreamEmote(emoteData, player)
                 .build().write().let { emotePacket ->
                     val data = INetworkInstance.safeGetBytesFromBuffer(emotePacket)
+
                     ServerPlayNetworking.createS2CPacket(EmoteCustomPayload(data))
                 }
         )
@@ -27,14 +28,16 @@ fun saveC2SEmotePacket(emoteData: KeyframeAnimation?, player: UUID) {
 
 fun saveC2SStopPacket() {
     val player = MinecraftClient.getInstance().player?.uuid
-    if (MinecraftClient.getInstance().player?.isMainPlayer == true && player != null)
-    ReplayModRecording.instance?.connectionEventHandler?.packetListener?.save(
-        EmotePacket.Builder()
-            .configureToSendStop(currentId, player)
-            .build().write().let {
-                val data = INetworkInstance.safeGetBytesFromBuffer(it)
-                ServerPlayNetworking.createS2CPacket(EmoteCustomPayload(data))
-            }
-    )
 
+    if (MinecraftClient.getInstance().player?.isMainPlayer == true && player != null) {
+        ReplayModRecording.instance?.connectionEventHandler?.packetListener?.save(
+            EmotePacket.Builder()
+                .configureToSendStop(currentId, player)
+                .build().write().let {
+                    val data = INetworkInstance.safeGetBytesFromBuffer(it)
+
+                    ServerPlayNetworking.createS2CPacket(EmoteCustomPayload(data))
+                }
+        )
+    }
 }

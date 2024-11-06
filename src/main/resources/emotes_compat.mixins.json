@@ -4,8 +4,6 @@
   "package": "dev.kosmx.emotesCompat.rp.mixin",
   "plugin": "dev.kosmx.emotesCompat.rp.init.MixinPlugin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
-  "client": [],
   "injectors": {
     "defaultRequire": 1
   }
