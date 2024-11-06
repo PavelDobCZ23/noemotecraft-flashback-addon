@@ -46,7 +46,7 @@ dependencies {
 }
 
 base {
-    archivesName.set("${project.properties["archive_base_name"]}-fabric-${project.properties["mod_version"]}+mc${project.properties["minecraft_version"]}")
+    archivesName.set("${project.properties["archive_base_name"]}-${project.properties["mod_version"]}+mc${project.properties["minecraft_version"]}")
 }
 
 kotlin {
