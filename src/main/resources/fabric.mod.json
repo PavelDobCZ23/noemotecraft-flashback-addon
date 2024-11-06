@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "noemotecraft-addon-replay",
   "version": "${version}",
-  "name": "NoEmotecraftAddonReplay",
-  "description": "Emotecraft and replaymod compatibility layer",
+  "name": "noemotecraft-addon-replay",
+  "description": "NoEmotecraft and replaymod compatibility layer",
   "authors": [
     "KosmX",
     "ClaimGaming"
@@ -12,7 +12,7 @@
     "TheMeko"
   ],
   "contact": {
-    "issues": "https://github.com/claimg/NoEmotecraftReplayAddon/issues"
+    "issues": "https://github.com/claimg/noemotecraft-addon-replay/issues"
   },
   "icon": "emotecraft_mod_logo.png",
   "license": "MIT",

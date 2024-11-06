@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "NoEmotecraftReplayAddon"
+rootProject.name = "noemotecraft-addon-replay"
