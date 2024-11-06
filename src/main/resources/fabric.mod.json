@@ -2,33 +2,35 @@
   "schemaVersion": 1,
   "id": "noemotecraft-addon-replay",
   "version": "${version}",
-  "name": "Emotecraft compatibility layer",
+  "name": "NoEmotecraftAddonReplay",
   "description": "Emotecraft and replaymod compatibility layer",
   "authors": [
     "KosmX",
-    "ClaimGaming",
+    "ClaimGaming"
+  ],
+  "contributors": [
     "TheMeko"
   ],
-  "contact": {},
+  "contact": {
+    "issues": "https://github.com/claimg/NoEmotecraftReplayAddon/issues"
+  },
+  "icon": "emotecraft_mod_logo.png",
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
-    "main": [],
     "client": [
       {
         "adapter": "kotlin",
         "value": "dev.kosmx.emotesCompat.rp.ClientInitKt::initializeClient"
       }
-    ],
-    "modmenu": []
+    ]
   },
-  "mixins": [],
   "depends": {
     "fabricloader": ">=0.16",
     "fabric": "*",
-    "fabric-language-kotlin": ">=1.9.0+kotlin.1.8.0",
-    "noemotecraft": "*",
+    "fabric-language-kotlin": ">=1.12.3+kotlin.2.0",
+    "noemotecraft": ">=2.5.2",
     "replaymod": "*",
-    "minecraft": "*"
+    "minecraft": ">=1.21"
   }
 }
