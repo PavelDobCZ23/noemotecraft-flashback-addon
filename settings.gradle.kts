@@ -15,4 +15,4 @@ pluginManagement {
 }
 
 
-rootProject.name = "emotes_replay_compat"
+rootProject.name = "noemotecraft_replay_addon"

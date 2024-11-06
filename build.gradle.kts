@@ -1,15 +1,14 @@
 plugins {
-    kotlin("jvm") version "1.8.21"
-    id("fabric-loom") version "1.2-SNAPSHOT"
+    kotlin("jvm") version "2.0.21"
+    id("fabric-loom") version "1.8-SNAPSHOT"
     id("io.github.juuxel.loom-quiltflower") version "1.8.+"
     id("maven-publish")
 }
 
 version = project.properties["mod_version"].toString()
-group = project.properties["maven_group"].toString()
 
-java.sourceCompatibility = JavaVersion.VERSION_17
-java.targetCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_21
+java.targetCompatibility = JavaVersion.VERSION_21
 
 
 loom {
@@ -51,11 +50,10 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.properties["cloth_config"]}") {
         exclude(group = "net.fabricmc.fabric-api")
     }
-    compileOnly("io.github.kosmx.emotes:emotesMain:${project.properties["emotecraft"]}")
+    modCompileOnly("maven.modrinth:noemotecraft:${project.properties["noemotecraft"]}")
 
     modImplementation("maven.modrinth:replaymod:${project.properties["replaymod"]}")
 
-    modLocalRuntime("maven.modrinth:emotecraft:${project.properties["emotecraft"]}-MC1.19.2-fabric")
 }
 
 base {
@@ -63,9 +61,7 @@ base {
 }
 
 kotlin {
-    target {
-        jvmToolchain(17)
-    }
+    jvmToolchain(21)
 }
 
 tasks {
@@ -93,20 +89,4 @@ tasks {
         }
     }
 
-}
-// configure the maven publication
-publishing {
-    publications {
-        create<MavenPublication>("mavenJava") {
-            from(components["java"])
-        }
-    }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
-    }
 }

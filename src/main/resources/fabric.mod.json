@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "emotes-compat-rp",
+  "id": "noemotecraft-addon-replay",
   "version": "${version}",
   "name": "Emotecraft compatibility layer",
-  "description": "Lorem ipsum dolor sit amet lorem sit enim invidunt diam sea accusam at imperdiet liber imperdiet",
+  "description": "Emotecraft and replaymod compatibility layer",
   "authors": [
-    "KosmX"
+    "KosmX",
+    "ClaimGaming",
+    "TheMeko"
   ],
   "contact": {},
   "license": "MIT",
@@ -22,10 +24,10 @@
   },
   "mixins": [],
   "depends": {
-    "fabricloader": ">=0.14.9",
+    "fabricloader": ">=0.16",
     "fabric": "*",
     "fabric-language-kotlin": ">=1.9.0+kotlin.1.8.0",
-    "emotecraft": "*",
+    "noemotecraft": "*",
     "replaymod": "*",
     "minecraft": "*"
   }
