@@ -1,27 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "noemotecraft-addon-replay",
-  "version": "${version}",
-  "name": "noemotecraft-addon-replay",
-  "description": "NoEmotecraft and replaymod compatibility layer",
+  "id": "noemotecraft-addon-flashback",
+  "version": "0.1",
+  "name": "NoEmotecraft Flashback Addon",
+  "description": "NoEmotecraft and Flashback compatibility layer",
   "authors": [
     "KosmX",
-    "ClaimGaming"
+    "ClaimGaming",
+    "PavelDobCZ23"
   ],
   "contributors": [
-    "TheMeko"
+    "TheMeko",
+    "PavelDobCZ23"
   ],
   "contact": {
-    "issues": "https://github.com/claimg/noemotecraft-addon-replay/issues"
+    "issues": "https://github.com/paveldobcz23/noemotecraft-flashback-addon/issues"
   },
-  "icon": "emotecraft_mod_logo.png",
+  "icon": "emotecraft_flashback_addon_logo.png",
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "client": [
       {
         "adapter": "kotlin",
-        "value": "dev.kosmx.emotesCompat.rp.ClientInitKt::initializeClient"
+        "value": "dev.kosmx.emotesCompatFlashback.rp.ClientInitKt::initializeClient"
       }
     ]
   },
@@ -30,7 +32,7 @@
     "fabric": "*",
     "fabric-language-kotlin": ">=1.12.3+kotlin.2.0",
     "noemotecraft": ">=2.5.2",
-    "replaymod": "*",
+    "flashback": "*",
     "minecraft": ">=1.21"
   }
 }

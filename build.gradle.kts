@@ -41,7 +41,7 @@ dependencies {
     }
     modCompileOnly("maven.modrinth:noemotecraft:${project.properties["noemotecraft"]}")
 
-    modImplementation("maven.modrinth:replaymod:${project.properties["replaymod"]}")
+    modImplementation("maven.modrinth:flashback:${project.properties["flashback"]}")
 
 }
 

@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "noemotecraft-addon-replay"
+rootProject.name = "noemotecraft-addon-flashback"

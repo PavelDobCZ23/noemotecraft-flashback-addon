@@ -1,8 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.kosmx.emotesCompat.rp.mixin",
-  "plugin": "dev.kosmx.emotesCompat.rp.init.MixinPlugin",
+  "package": "dev.kosmx.emotesCompatFlashback.rp.mixin",
+  "plugin": "dev.kosmx.emotesCompatFlashback.rp.init.MixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "injectors": {
     "defaultRequire": 1

@@ -1,4 +1,4 @@
-package dev.kosmx.emotesCompat.rp
+package dev.kosmx.emotesCompatFlashback.rp
 
 import io.github.kosmx.emotes.api.events.client.ClientEmoteEvents
 

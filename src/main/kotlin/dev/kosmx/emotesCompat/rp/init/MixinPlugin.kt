@@ -1,4 +1,4 @@
-package dev.kosmx.emotesCompat.rp.init
+package dev.kosmx.emotesCompatFlashback.rp.init
 
 import org.objectweb.asm.tree.ClassNode
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin
